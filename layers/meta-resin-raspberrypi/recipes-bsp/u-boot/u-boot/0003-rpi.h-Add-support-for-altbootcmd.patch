@@ -1,0 +1,36 @@
+From f2ffe76b5f3bcd3208e77b400a4b1a4d93d4ace7 Mon Sep 17 00:00:00 2001
+From: Zubair Lutfullah Kakakhel <zubair@resin.io>
+Date: Mon, 9 Jul 2018 10:38:49 +0100
+Subject: [PATCH] rpi.h: Add support for altbootcmd
+
+Upstream-Status: Inappropriate [configuration]
+
+Signed-off-by: Zubair Lutfullah Kakakhel <zubair@resin.io>
+---
+ include/configs/rpi.h | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/include/configs/rpi.h b/include/configs/rpi.h
+index cab8661..92dab4c 100644
+--- a/include/configs/rpi.h
++++ b/include/configs/rpi.h
+@@ -91,6 +91,10 @@
+ #define CONFIG_SYS_LOAD_ADDR		0x1000000
+ #define CONFIG_PREBOOT			"usb start"
+ 
++/* Bootcount */
++#define CONFIG_BOOTCOUNT_LIMIT
++#define CONFIG_BOOTCOUNT_ENV
++
+ /* Shell */
+ #define CONFIG_CMDLINE_EDITING
+ 
+@@ -156,6 +160,8 @@
+ 
+ #define CONFIG_EXTRA_ENV_SETTINGS \
+ 	"dhcpuboot=usb start; dhcp u-boot.uimg; bootm\0" \
++	"altbootcmd=env set boot_scripts altboot.scr.uimg altboot.scr; run distro_bootcmd;\0"\
++	"bootlimit=1\0"\
+ 	ENV_DEVICE_SETTINGS \
+ 	ENV_MEM_LAYOUT_SETTINGS \
+ 	BOOTENV

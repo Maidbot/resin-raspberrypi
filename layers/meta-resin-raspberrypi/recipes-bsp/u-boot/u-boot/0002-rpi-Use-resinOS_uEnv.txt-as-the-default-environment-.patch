@@ -1,0 +1,59 @@
+From 71f18887c09d0bb80920e809859cb12d4eb8db89 Mon Sep 17 00:00:00 2001
+From: Zubair Lutfullah Kakakhel <zubair@resin.io>
+Date: Mon, 16 Jul 2018 16:43:58 +0100
+Subject: [PATCH] rpi: Use resinOS_uEnv.txt as the default environment file
+
+Signed-off-by: Zubair Lutfullah Kakakhel <zubair@resin.io>
+---
+ configs/rpi_0_w_defconfig   | 1 +
+ configs/rpi_2_defconfig     | 1 +
+ configs/rpi_3_32b_defconfig | 1 +
+ configs/rpi_3_defconfig     | 1 +
+ configs/rpi_defconfig       | 1 +
+ 5 files changed, 5 insertions(+)
+
+diff --git a/configs/rpi_0_w_defconfig b/configs/rpi_0_w_defconfig
+index ffae932..e399897 100644
+--- a/configs/rpi_0_w_defconfig
++++ b/configs/rpi_0_w_defconfig
+@@ -41,3 +41,4 @@ CONFIG_BOOT_RETRY_TIME=15
+ CONFIG_RESET_TO_RETRY=y
+ CONFIG_BOOTDELAY=1
+ CONFIG_BOOTCOUNT=y
++CONFIG_ENV_FAT_FILE="resinOS_uEnv.txt"
+diff --git a/configs/rpi_2_defconfig b/configs/rpi_2_defconfig
+index 3e5c2b9..444f9a8 100644
+--- a/configs/rpi_2_defconfig
++++ b/configs/rpi_2_defconfig
+@@ -41,3 +41,4 @@ CONFIG_BOOT_RETRY_TIME=15
+ CONFIG_RESET_TO_RETRY=y
+ CONFIG_BOOTDELAY=1
+ CONFIG_BOOTCOUNT=y
++CONFIG_ENV_FAT_FILE="resinOS_uEnv.txt"
+diff --git a/configs/rpi_3_32b_defconfig b/configs/rpi_3_32b_defconfig
+index cdae78b..64a2d2b 100644
+--- a/configs/rpi_3_32b_defconfig
++++ b/configs/rpi_3_32b_defconfig
+@@ -43,3 +43,4 @@ CONFIG_BOOT_RETRY_TIME=15
+ CONFIG_RESET_TO_RETRY=y
+ CONFIG_BOOTDELAY=1
+ CONFIG_BOOTCOUNT=y
++CONFIG_ENV_FAT_FILE="resinOS_uEnv.txt"
+diff --git a/configs/rpi_3_defconfig b/configs/rpi_3_defconfig
+index 32818ae..33e899f 100644
+--- a/configs/rpi_3_defconfig
++++ b/configs/rpi_3_defconfig
+@@ -43,3 +43,4 @@ CONFIG_BOOT_RETRY_TIME=15
+ CONFIG_RESET_TO_RETRY=y
+ CONFIG_BOOTDELAY=1
+ CONFIG_BOOTCOUNT=y
++CONFIG_ENV_FAT_FILE="resinOS_uEnv.txt"
+diff --git a/configs/rpi_defconfig b/configs/rpi_defconfig
+index 3a329fc..4a57845 100644
+--- a/configs/rpi_defconfig
++++ b/configs/rpi_defconfig
+@@ -41,3 +41,4 @@ CONFIG_BOOT_RETRY_TIME=15
+ CONFIG_RESET_TO_RETRY=y
+ CONFIG_BOOTDELAY=1
+ CONFIG_BOOTCOUNT=y
++CONFIG_ENV_FAT_FILE="resinOS_uEnv.txt"
