@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Update u-boot to load kernel from rootfs partition [ZubairLK]
+
 # v2.15.1+rev1
 ## (2018-08-30)
 
