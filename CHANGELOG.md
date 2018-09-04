@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.15.1+rev2
+## (2018-09-04)
+
+* Load the kernel from the rootfs [Zubair Lutfullah Kakakhel]
+
 * Update u-boot to load kernel from rootfs partition [ZubairLK]
 
 # v2.15.1+rev1
